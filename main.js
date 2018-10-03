@@ -119,10 +119,12 @@ swarm.on('message', (msg) => {
 });
 
 swarm.on('connected', () => {
-  swarm.publish({
-    type: 'NEW_USER',
-    id: Math.random(),
-    payload: 'Hello World',
-    timestamp: Date.now(),
-  });
+  setTimeout(() => {
+    swarm.publish({
+      type: 'NEW_USER',
+      id: Math.random(),
+      payload: 'Hello World',
+      timestamp: Date.now(),
+    });
+  }, 3000);
 });
