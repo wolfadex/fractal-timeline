@@ -54,47 +54,58 @@ app.on('activate', function() {
 const sw = swarm();
 
 sw.on('peer', (peer) => {
-  console.log('found peer', peer);
+  // console.log('found peer', peer);
+  console.log('found peer');
 });
 
 sw.on('peer-banned', (peerAddress, details) => {
-  console.log('peer banned', peerAddress, details);
+  // console.log('peer banned', peerAddress, details);
+  console.log('peer banned');
 });
 
 sw.on('peer-rejected', (peerAddress, details) => {
-  console.log('peer rejected', peerAddress, details);
+  // console.log('peer rejected', peerAddress, details);
+  console.log('peer rejected');
 });
 
 sw.on('drop', (peer) => {
-  console.log('peer dropped', peer);
+  // console.log('peer dropped', peer);
+  console.log('peer dropped');
 });
 
 sw.on('connecting', (peer) => {
-  console.log('connecting', peer);
+  // console.log('connecting', peer);
+  console.log('connecting');
 });
 
 sw.on('connect-failed', (peer, details) => {
-  console.log('connect failed', peer, details);
+  // console.log('connect failed', peer, details);
+  console.log('connect failed');
 });
 
 sw.on('handshaking', (connection, info) => {
-  console.log('handshaking', connection, info);
+  // console.log('handshaking', connection, info);
+  console.log('handshaking');
 });
 
 sw.on('handshake-timeout', (connection, info) => {
-  console.log('handshake timeout', connection, info);
+  // console.log('handshake timeout', connection, info);
+  console.log('handshake timeout');
 });
 
 sw.on('connection', (connection, info) => {
-  console.log('connection', connection, info);
+  // console.log('connection', connection, info);
+  console.log('connection');
 });
 
 sw.on('connection-closed', (connection, info) => {
-  console.log('connection closed', connection, info);
+  // console.log('connection closed', connection, info);
+  console.log('connection closed');
 });
 
 sw.on('redundant-connection', (connection, info) => {
-  console.log('redundant connection', connection, info);
+  // console.log('redundant connection', connection, info);
+  console.log('redundant connection');
 });
 
 sw.listen(3000);
