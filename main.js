@@ -53,9 +53,9 @@ app.on('activate', function() {
 
 const sw = swarm();
 
-// sw.listen(1234);
-// sw.join('wolfadex__fractal-timeline__test');
+sw.listen(1234);
+sw.join('wolfadex__fractal-timeline__test');
 
-// sw.on('connection', (connection) => {
-//   console.log('found + connected to peer', connection);
-// });
+sw.on('connection', (connection) => {
+  console.log('found + connected to peer', connection);
+});
