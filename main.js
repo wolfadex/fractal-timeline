@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron');
-const swarm = require('discovery-swarm');
+// const swarm = require('discovery-swarm');
+const pubsub = require('pubsub-swarm');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -51,62 +52,77 @@ app.on('activate', function() {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-const sw = swarm();
+// const sw = swarm();
 
-sw.on('peer', (peer) => {
-  // console.log('found peer', peer);
-  console.log('found peer');
+// sw.on('peer', (peer) => {
+//   // console.log('found peer', peer);
+//   console.log('found peer');
+// });
+
+// sw.on('peer-banned', (peerAddress, details) => {
+//   // console.log('peer banned', peerAddress, details);
+//   console.log('peer banned');
+// });
+
+// sw.on('peer-rejected', (peerAddress, details) => {
+//   // console.log('peer rejected', peerAddress, details);
+//   console.log('peer rejected');
+// });
+
+// sw.on('drop', (peer) => {
+//   // console.log('peer dropped', peer);
+//   console.log('peer dropped');
+// });
+
+// sw.on('connecting', (peer) => {
+//   // console.log('connecting', peer);
+//   console.log('connecting');
+// });
+
+// sw.on('connect-failed', (peer, details) => {
+//   // console.log('connect failed', peer, details);
+//   console.log('connect failed');
+// });
+
+// sw.on('handshaking', (connection, info) => {
+//   // console.log('handshaking', connection, info);
+//   console.log('handshaking');
+// });
+
+// sw.on('handshake-timeout', (connection, info) => {
+//   // console.log('handshake timeout', connection, info);
+//   console.log('handshake timeout');
+// });
+
+// sw.on('connection', (connection, info) => {
+//   // console.log('connection', connection, info);
+//   console.log('connection');
+// });
+
+// sw.on('connection-closed', (connection, info) => {
+//   // console.log('connection closed', connection, info);
+//   console.log('connection closed');
+// });
+
+// sw.on('redundant-connection', (connection, info) => {
+//   // console.log('redundant connection', connection, info);
+//   console.log('redundant connection');
+// });
+
+// sw.listen(3000);
+// sw.join('wolfadex__fractal-timeline__test');
+
+const swarm = pubsub('wolfadex__fractal-timeline__test');
+
+swarm.on('message', (msg) => {
+  console.log('message', msg);
 });
 
-sw.on('peer-banned', (peerAddress, details) => {
-  // console.log('peer banned', peerAddress, details);
-  console.log('peer banned');
+swarm.on('connected', () => {
+  swarm.publish({
+    type: 'NEW_USER',
+    id: Math.random(),
+    payload: 'Hello World',
+    timestamp: Date.now(),
+  });
 });
-
-sw.on('peer-rejected', (peerAddress, details) => {
-  // console.log('peer rejected', peerAddress, details);
-  console.log('peer rejected');
-});
-
-sw.on('drop', (peer) => {
-  // console.log('peer dropped', peer);
-  console.log('peer dropped');
-});
-
-sw.on('connecting', (peer) => {
-  // console.log('connecting', peer);
-  console.log('connecting');
-});
-
-sw.on('connect-failed', (peer, details) => {
-  // console.log('connect failed', peer, details);
-  console.log('connect failed');
-});
-
-sw.on('handshaking', (connection, info) => {
-  // console.log('handshaking', connection, info);
-  console.log('handshaking');
-});
-
-sw.on('handshake-timeout', (connection, info) => {
-  // console.log('handshake timeout', connection, info);
-  console.log('handshake timeout');
-});
-
-sw.on('connection', (connection, info) => {
-  // console.log('connection', connection, info);
-  console.log('connection');
-});
-
-sw.on('connection-closed', (connection, info) => {
-  // console.log('connection closed', connection, info);
-  console.log('connection closed');
-});
-
-sw.on('redundant-connection', (connection, info) => {
-  // console.log('redundant connection', connection, info);
-  console.log('redundant connection');
-});
-
-sw.listen(3000);
-sw.join('wolfadex__fractal-timeline__test');

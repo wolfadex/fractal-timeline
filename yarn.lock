@@ -964,6 +964,10 @@ bittorrent-dht@^7.10.0:
     safe-buffer "^5.0.1"
     simple-sha1 "^2.1.0"
 
+blake2s@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/blake2s/-/blake2s-1.0.1.tgz#1598822a320ece6aa401ba982954f82f61b0cd7b"
+
 bluebird@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.2.tgz#1be0908e054a751754549c270489c1505d4ab15a"
@@ -1194,6 +1198,23 @@ chalk@^2.0.0, chalk@^2.4.1:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
+
+chloride-test@^1.1.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/chloride-test/-/chloride-test-1.2.2.tgz#178686a85e9278045112e96e8c791793f9a10aea"
+  dependencies:
+    json-buffer "^2.0.11"
+
+chloride@^2.0.1:
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/chloride/-/chloride-2.2.10.tgz#cb68ddeed9328a63b8bd6e1585ed584c8e122f23"
+  dependencies:
+    is-electron "^2.0.0"
+    sodium-browserify "^1.2.4"
+    sodium-browserify-tweetnacl "^0.2.2"
+    sodium-chloride "^1.1.0"
+  optionalDependencies:
+    sodium-native "^2.1.6"
 
 chokidar@^2.0.0, chokidar@^2.0.2:
   version "2.0.4"
@@ -1534,6 +1555,10 @@ deep-equal@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
 
+deep-equal@~0.2.1:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-0.2.2.tgz#84b745896f34c684e98f2ce0e42abaf43bba017d"
+
 deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
@@ -1624,7 +1649,7 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
-discovery-channel@^5.5.1:
+discovery-channel@^5.3.0:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/discovery-channel/-/discovery-channel-5.5.1.tgz#9af6fc7f8cecdff40dbe4f13a49463718d4cd676"
   dependencies:
@@ -1635,19 +1660,18 @@ discovery-channel@^5.5.1:
     pretty-hash "^1.0.1"
     thunky "^0.1.0"
 
-discovery-swarm@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/discovery-swarm/-/discovery-swarm-5.1.2.tgz#91be73ab07836741a1151d0a872464465830b1cc"
+discovery-swarm@^3.1.2:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/discovery-swarm/-/discovery-swarm-3.4.1.tgz#b4b447be733ccd61518c5d0d617576dda123b873"
   dependencies:
     buffer-equals "^1.0.3"
     connections "^1.4.2"
-    debug "^3.1.0"
-    discovery-channel "^5.5.1"
+    discovery-channel "^5.3.0"
     length-prefixed-message "^3.0.3"
-    pump "^3.0.0"
+    pump "^1.0.1"
     to-buffer "^1.0.1"
   optionalDependencies:
-    utp-native "^1.7.2"
+    utp-native "^1.2.2"
 
 dns-discovery@^6.0.1:
   version "6.2.2"
@@ -1753,6 +1777,16 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
+
+"eccjs@git://github.com/dominictarr/eccjs.git#586f6d47507184a2efe84684ed0a30605cbc43a5":
+  version "0.3.0"
+  resolved "git://github.com/dominictarr/eccjs.git#586f6d47507184a2efe84684ed0a30605cbc43a5"
+
+ed2curve@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/ed2curve/-/ed2curve-0.1.4.tgz#94a44248bb87da35db0eff7af0aa576168117f59"
+  dependencies:
+    tweetnacl "0.x.x"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -2343,6 +2377,10 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
+hmac@~1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npmjs.org/hmac/-/hmac-1.0.1.tgz#16bda6b8ad5ae70848a1b9ec7c6f3577dfb19b24"
+
 hosted-git-info@^2.1.4:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
@@ -2508,7 +2546,7 @@ inherits@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.1.tgz#b17d08d326b4423e568eff719f91b0b1cbdf69f1"
 
-ini@~1.3.0:
+ini@^1.3.5, ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
 
@@ -2537,7 +2575,7 @@ ip-regex@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
 
-ip@^1.1.0, ip@^1.1.5:
+ip@^1.1.0, ip@^1.1.3, ip@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
 
@@ -2616,6 +2654,10 @@ is-descriptor@^1.0.0, is-descriptor@^1.0.2:
     is-accessor-descriptor "^1.0.0"
     is-data-descriptor "^1.0.0"
     kind-of "^6.0.2"
+
+is-electron@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/is-electron/-/is-electron-2.1.0.tgz#37dd2e9e7167efa8bafce86c0c25762bc4b851fa"
 
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
@@ -2711,6 +2753,10 @@ is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
 
+is-valid-domain@~0.0.1:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/is-valid-domain/-/is-valid-domain-0.0.6.tgz#97f8ec909cffd21f795667029587d73354fd6412"
+
 is-windows@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
@@ -2764,6 +2810,10 @@ jsesc@^2.5.1:
 jsesc@~0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
+
+json-buffer@^2.0.11:
+  version "2.0.11"
+  resolved "http://registry.npmjs.org/json-buffer/-/json-buffer-2.0.11.tgz#3e441fda3098be8d1e3171ad591bc62a33e2d55f"
 
 json-parse-better-errors@^1.0.2:
   version "1.0.2"
@@ -2876,6 +2926,16 @@ length-prefixed-message@^3.0.3:
   resolved "https://registry.yarnpkg.com/length-prefixed-message/-/length-prefixed-message-3.0.3.tgz#245474d69abc0614dca368dc35aa8074982a23ac"
   dependencies:
     varint "^3.0.1"
+
+libsodium-wrappers@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/libsodium-wrappers/-/libsodium-wrappers-0.7.3.tgz#b7e6326a5c42eb269540e360ce9c2600eb90c75c"
+  dependencies:
+    libsodium "0.7.3"
+
+libsodium@0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/libsodium/-/libsodium-0.7.3.tgz#35faf57293ba5485049d5072d0e96feda12f1f35"
 
 load-json-file@^1.0.0:
   version "1.1.0"
@@ -3200,7 +3260,7 @@ multistream@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.5"
 
-nan@^2.5.1, nan@^2.9.2:
+nan@^2.4.0, nan@^2.5.1, nan@^2.9.2:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.1.tgz#90e22bccb8ca57ea4cd37cc83d3819b52eea6766"
 
@@ -3697,6 +3757,12 @@ pretty-hash@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/pretty-hash/-/pretty-hash-1.0.1.tgz#16e0579188def56bdb565892bcd05a5d65324807"
 
+private-box@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/private-box/-/private-box-0.0.3.tgz#99fcd2448eae3aeb76d0a9e32f0c3c0adc8eed29"
+  dependencies:
+    chloride "^2.0.1"
+
 private@^0.1.6:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -3757,6 +3823,21 @@ public-encrypt@^4.0.0:
     randombytes "^2.0.1"
     safe-buffer "^5.1.2"
 
+pubsub-swarm@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pubsub-swarm/-/pubsub-swarm-1.0.0.tgz#c927607a39ce1a3461ec356d5158b1f95f144859"
+  dependencies:
+    debug "^2.2.0"
+    discovery-swarm "^3.1.2"
+    secure-gossip "^0.2.2"
+
+pump@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/pump/-/pump-1.0.3.tgz#5dfe8311c33bbf6fc18261f9f34702c47c08a954"
+  dependencies:
+    end-of-stream "^1.1.0"
+    once "^1.3.1"
+
 pump@^2.0.0, pump@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pump/-/pump-2.0.1.tgz#12399add6e4cf7526d973cbc8b5ce2e2908b3909"
@@ -3771,7 +3852,7 @@ pump@^3.0.0:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
-pumpify@^1.3.3:
+pumpify@^1.3.3, pumpify@^1.3.4:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/pumpify/-/pumpify-1.5.1.tgz#36513be246ab27570b1a374a5ce278bfd74370ce"
   dependencies:
@@ -4131,6 +4212,16 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
+secure-gossip@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/secure-gossip/-/secure-gossip-0.2.2.tgz#041f7831c814902fceecf73fa3aa0ab6a24fc297"
+  dependencies:
+    debug "^2.2.0"
+    pumpify "^1.3.4"
+    readable-stream "^2.0.5"
+    split "^1.0.0"
+    ssb-keys "^4.0.10"
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
@@ -4222,6 +4313,12 @@ setprototypeof@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
 
+sha.js@2.4.5:
+  version "2.4.5"
+  resolved "http://registry.npmjs.org/sha.js/-/sha.js-2.4.5.tgz#27d171efcc82a118b99639ff581660242b506e7c"
+  dependencies:
+    inherits "^2.0.1"
+
 sha.js@^2.4.0, sha.js@^2.4.8:
   version "2.4.11"
   resolved "http://registry.npmjs.org/sha.js/-/sha.js-2.4.11.tgz#37a5cf0b81ecbc6943de109ba2960d1b26584ae7"
@@ -4299,6 +4396,37 @@ sockjs@0.3.19:
   dependencies:
     faye-websocket "^0.10.0"
     uuid "^3.0.1"
+
+sodium-browserify-tweetnacl@^0.2.2, sodium-browserify-tweetnacl@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/sodium-browserify-tweetnacl/-/sodium-browserify-tweetnacl-0.2.3.tgz#b5537ffcbb9f74ebc443b8b6a211b291e8fcbc8e"
+  dependencies:
+    chloride-test "^1.1.0"
+    ed2curve "^0.1.4"
+    sha.js "^2.4.8"
+    tweetnacl "^0.14.1"
+    tweetnacl-auth "^0.3.0"
+
+sodium-browserify@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/sodium-browserify/-/sodium-browserify-1.2.4.tgz#ae2b8274a2a9fc9f322a6077b73a73f55ed0b00b"
+  dependencies:
+    libsodium-wrappers "^0.7.3"
+    sha.js "2.4.5"
+    sodium-browserify-tweetnacl "^0.2.3"
+    tweetnacl "^0.14.1"
+
+sodium-chloride@^1.1.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/sodium-chloride/-/sodium-chloride-1.1.2.tgz#823c9f9f4cd103156ef3033def256aa2a2b89eb0"
+
+sodium-native@^2.1.6:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/sodium-native/-/sodium-native-2.2.2.tgz#8cae9ee50b050f147aad9e85bdd5e373baf0be9a"
+  dependencies:
+    ini "^1.3.5"
+    nan "^2.4.0"
+    node-gyp-build "^3.0.0"
 
 source-list-map@^2.0.0:
   version "2.0.0"
@@ -4384,6 +4512,32 @@ split-string@^3.0.1, split-string@^3.0.2:
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
   dependencies:
     extend-shallow "^3.0.0"
+
+split@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/split/-/split-1.0.1.tgz#605bd9be303aa59fb35f9229fbea0ddec9ea07d9"
+  dependencies:
+    through "2"
+
+ssb-keys@^4.0.10:
+  version "4.0.10"
+  resolved "http://registry.npmjs.org/ssb-keys/-/ssb-keys-4.0.10.tgz#3843c48ccfc5c83acd1d02ee2c98bfac6e33c6d8"
+  dependencies:
+    blake2s "~1.0.0"
+    chloride "^2.0.1"
+    deep-equal "~0.2.1"
+    eccjs "git://github.com/dominictarr/eccjs.git#586f6d47507184a2efe84684ed0a30605cbc43a5"
+    hmac "~1.0.1"
+    mkdirp "~0.5.0"
+    private-box "~0.0.3"
+    ssb-ref "^2.0.0"
+
+ssb-ref@^2.0.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/ssb-ref/-/ssb-ref-2.12.0.tgz#0f5c2c8b54956e2a296caa8f7b22d5e97b664b89"
+  dependencies:
+    ip "^1.1.3"
+    is-valid-domain "~0.0.1"
 
 sshpk@^1.7.0:
   version "1.14.2"
@@ -4552,6 +4706,10 @@ through2@~0.2.3:
     readable-stream "~1.1.9"
     xtend "~2.1.1"
 
+through@2:
+  version "2.3.8"
+  resolved "http://registry.npmjs.org/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+
 thunky@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/thunky/-/thunky-0.1.0.tgz#bf30146824e2b6e67b0f2d7a4ac8beb26908684e"
@@ -4633,7 +4791,13 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tweetnacl@^0.14.3, tweetnacl@~0.14.0:
+tweetnacl-auth@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/tweetnacl-auth/-/tweetnacl-auth-0.3.1.tgz#b75bc2df15649bb84e8b9aa3c0669c6c4bce0d25"
+  dependencies:
+    tweetnacl "0.x.x"
+
+tweetnacl@0.x.x, tweetnacl@^0.14.1, tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
@@ -4801,7 +4965,7 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
 
-utp-native@^1.7.2:
+utp-native@^1.2.2:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/utp-native/-/utp-native-1.7.3.tgz#c829724995bfcd9dfb3027389e5c0bf8ddaa0bf2"
   dependencies:
