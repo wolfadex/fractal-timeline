@@ -53,9 +53,49 @@ app.on('activate', function() {
 
 const sw = swarm();
 
-sw.listen(1234);
-sw.join('wolfadex__fractal-timeline__test');
-
-sw.on('connection', (connection) => {
-  console.log('found + connected to peer', connection);
+sw.on('peer', (peer) => {
+  console.log('found peer', peer);
 });
+
+sw.on('peer-banned', (peerAddress, details) => {
+  console.log('peer banned', peerAddress, details);
+});
+
+sw.on('peer-rejected', (peerAddress, details) => {
+  console.log('peer rejected', peerAddress, details);
+});
+
+sw.on('drop', (peer) => {
+  console.log('peer dropped', peer);
+});
+
+sw.on('connecting', (peer) => {
+  console.log('connecting', peer);
+});
+
+sw.on('connect-failed', (peer, details) => {
+  console.log('connect failed', peer, details);
+});
+
+sw.on('handshaking', (connection, info) => {
+  console.log('handshaking', connection, info);
+});
+
+sw.on('handshake-timeout', (connection, info) => {
+  console.log('handshake timeout', connection, info);
+});
+
+sw.on('connection', (connection, info) => {
+  console.log('connection', connection, info);
+});
+
+sw.on('connection-closed', (connection, info) => {
+  console.log('connection closed', connection, info);
+});
+
+sw.on('redundant-connection', (connection, info) => {
+  console.log('redundant connection', connection, info);
+});
+
+sw.listen(3000);
+sw.join('wolfadex__fractal-timeline__test');
